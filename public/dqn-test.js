@@ -34,8 +34,8 @@ setInterval(function () { // start the learning loop
         scatterChart.data.datasets[1].data.push({ x: trial, y: 1 })
         scatterChart.update()
     } else if (trial % 60000 == 0) {
-        scatterChart.data.datasets[0].data.push({ x: trial, y: tTop / 1000 })
-        scatterChart.data.datasets[1].data.push({ x: trial, y: tBot / 1000 })
+        scatterChart.data.datasets[0].data.push({ x: trial, y: tTop / 60000 })
+        scatterChart.data.datasets[1].data.push({ x: trial, y: tBot / 60000 })
         scatterChart.update()
         tTop = 0;
         tBot = 0;
